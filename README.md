@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
@@ -62,3 +63,21 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+=======
+# hairRe
+### FIX ISSUES ###
+FIX/TIP (4:15) - echo $PATH does not work under windows (prompt). Instead, you must try just "path" (remove the quotations) on cmd/prompt.
+
+FIX (9:38) - ERROR "Could not open input file: artisan" when run "php artisan serve": As he said, we must run this command inside the project folder. 
+
+FIX (11:45) - make:auth works only on Laravel 5.8 and older versions.* The newer version, try: 
+1. composer require laravel/ui
+2. php artisan ui vue --auth
+3. npm install && npm run dev
+
+FIX (22:00) - If you try to use "vim" over Windows cmd: for Windows users, "vim" should not works. So, being at the project folder, try: copy con database\database.sqlite (press enter, so F6 then, enter again). It will create the file with nothing inside. METHOD 2: re-create this file using a different method, like (under windows os) right-click on the project folder, "create new text file" (but rename the extension txt to sqlite!) and rename it to database.sqlite
+
+FIX (23:35) - console echoes for php artisan migrate: "Could not find driver (SQL: PRAGMA...": Just open php.ini and uncomment extension=pdo_sqlite (or extension=pdo_mysql if you use it).
+If this error persists, even after uncommenting  extension=pdo_sqlite, with PHP Warning "PHP Startup: Unable to load dynamic library 'pdo_sqlite'". Try fix that by typing: 
+sudo apt-get install php7.4-sqlite
+>>>>>>> cf73f5c40a7ef21a656c2626763bfd8e9f4749ed
